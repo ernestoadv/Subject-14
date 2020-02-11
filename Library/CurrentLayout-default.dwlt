@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 494}
   m_MaxSize: {x: 18008, y: 14044}
   vertical: 0
-  controlID: 2488
+  controlID: 1330
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 444}
   m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 2466
+  controlID: 1273
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 494}
   m_MaxSize: {x: 10004, y: 14044}
   vertical: 1
-  controlID: 2494
+  controlID: 1249
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -415,9 +415,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 9.58655, y: 4.3768234, z: -0.7337793}
+    m_Target: {x: 18.814356, y: 0.15775919, z: -0.734375}
     speed: 2
-    m_Value: {x: 9.58655, y: 4.3768234, z: -0.7337793}
+    m_Value: {x: 18.814356, y: 0.15775919, z: -0.734375}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -450,9 +450,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 26.79275
+    m_Target: 47.242134
     speed: 2
-    m_Value: 26.79275
+    m_Value: 47.242134
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 14132
+  m_LastSelectedObjectID: -1698
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -634,9 +634,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e4370000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 8af0ffff98f1ffff36faffff8efaffff6afbffffac3600003837000044370000c4370000
+      m_SelectedIDs: 5ef9ffff
+      m_LastClickedID: -1698
+      m_ExpandedIDs: 7af9ffff7ef9ffffaaf9fffff6f9ffff50fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -698,20 +698,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Sprites/Background
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Users\Mike\Documents\Erasmus\Project Course on Game Development\Subject14
+  m_LastProjectPath: D:\Users\Mike\Documents\GitHub\Subject-14
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 082d0000
     m_LastClickedID: 11528
-    m_ExpandedIDs: ffffffff000000007e2d0000a02d0000c82d00001e2e0000262e0000282e00007c2e0000f42e0000fe2e00009a2f0000e62f0000fe2f00001c300000323000006a300000103100002a31000038310000ae31000000320000083500000a3500000c3500000e35000010350000
+    m_ExpandedIDs: ffffffff00000000842d0000a62d0000d22d0000282e0000302e0000322e0000862e0000fe2e0000082f0000a42f0000f02f0000083000002a3000004030000078300000203100003a31000048310000be3100001032000016350000183500001a3500001c3500001e350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -739,7 +738,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000007e2d0000a02d0000c82d00001e2e0000262e0000282e00007c2e0000f42e0000fe2e00009a2f0000e62f0000fe2f00001c300000323000006a300000103100002a31000038310000ae31000000320000083500000a3500000c3500000e35000010350000
+    m_ExpandedIDs: ffffffff00000000842d0000a62d0000d22d0000282e0000302e0000322e0000862e0000fe2e0000082f0000a42f0000f02f0000083000002a3000004030000078300000203100003a31000048310000be3100001032000016350000183500001a3500001c3500001e350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
