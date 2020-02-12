@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6cc693ae8aa8d468759db822a88217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 1381830756}
+  playerStats: {fileID: 0}
   fillHealthImage: {fileID: 89074776}
   healthSlider: {fileID: 97105555}
   fillManaImage: {fileID: 429279883}
@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10664734435b4ad4cbe6e426cb9961aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1381830765}
+  player: {fileID: 0}
   isFlipped: 0
   currentHealth: 15
 --- !u!114 &243590976
@@ -497,7 +497,7 @@ MonoBehaviour:
   retreatDistance: 6.8
   startWalkingDistance: 14
   startTimeBtwShots: 1.7
-  player: {fileID: 1381830765}
+  player: {fileID: 0}
   isFlipped: 0
 --- !u!212 &243590977
 SpriteRenderer:
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   retreatDistance: 7
   startWalkingDistance: 14
   startTimeBtwShots: 1.7
-  player: {fileID: 1381830765}
+  player: {fileID: 0}
   isFlipped: 0
 --- !u!114 &416418521
 MonoBehaviour:
@@ -1115,7 +1115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10664734435b4ad4cbe6e426cb9961aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1381830765}
+  player: {fileID: 0}
   isFlipped: 0
   currentHealth: 15
 --- !u!50 &416418522
@@ -2788,7 +2788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a6cc693ae8aa8d468759db822a88217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStats: {fileID: 1381830756}
+  playerStats: {fileID: 0}
   fillHealthImage: {fileID: 89074776}
   healthSlider: {fileID: 97105555}
   fillManaImage: {fileID: 429279883}
@@ -2843,18 +2843,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1381830756 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 838611594295499292, guid: 6dc8172da65c7db49aa5cc079e22220f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1741325712}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f175bedc9fe04f742bd6165c88d31b86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1381830765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
@@ -3034,7 +3022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10664734435b4ad4cbe6e426cb9961aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1381830765}
+  player: {fileID: 0}
   isFlipped: 0
   currentHealth: 15
 --- !u!114 &1469755319
@@ -3058,7 +3046,7 @@ MonoBehaviour:
   retreatDistance: 7
   startWalkingDistance: 14
   startTimeBtwShots: 1.7
-  player: {fileID: 1381830765}
+  player: {fileID: 0}
   isFlipped: 0
 --- !u!212 &1469755320
 SpriteRenderer:
@@ -3575,31 +3563,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6020001
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.6020001
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.6020001
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611594408328399, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548300, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc8172da65c7db49aa5cc079e22220f, type: 3}
@@ -4297,7 +4260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 2139148355}
-  Player: {fileID: 1381830765}
+  Player: {fileID: 0}
   initialPositionOfCamera: {fileID: 2123733604}
   endPositionOfCamera: {fileID: 1426630432}
   colliderLeft: {fileID: 1152221918}
