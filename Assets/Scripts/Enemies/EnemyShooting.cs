@@ -11,6 +11,7 @@ public class EnemyShooting : MonoBehaviour
     public float retreatSpeed;
     public float stoppingDistance;
     public float retreatDistance;
+    public float startWalkingDistance;
 
     private float timeBtwShots;
     //every 2 seconds
@@ -57,7 +58,7 @@ public class EnemyShooting : MonoBehaviour
 
     private void ShootBullet()
     {
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
+        if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) <= startWalkingDistance)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
             myAnimator.SetBool("walk", true);
