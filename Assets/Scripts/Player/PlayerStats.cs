@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
     {
         maxHealth = 100;
         currentHealth = maxHealth;
-        maxMana = 100;
+        maxMana = 75;
         currentMana = maxMana;
         animator = GetComponent<Animator>();
     }

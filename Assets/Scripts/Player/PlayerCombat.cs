@@ -31,8 +31,7 @@ public class PlayerCombat : MonoBehaviour
 
     public PlayerStats playerStats;
 
-    private int eyeBeamSpellCost = 5;
-    private int shieldSpellCost = 10;
+    public int eyeBeamSpellCost, shieldSpellCost;
 
     // Start is called before the first frame update
     void Start()

@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraBounds.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss_Run.cs" />
     <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
     <Compile Include="Assets\Scripts\Bullet\BulletScript.cs" />
