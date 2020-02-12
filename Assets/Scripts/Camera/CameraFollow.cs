@@ -7,13 +7,18 @@ public class CameraFollow : MonoBehaviour
     public Camera camera;
     public Transform Player;
     public Transform initialPositionOfCamera, endPositionOfCamera;
+    public Transform colliderLeft;
+    public Transform colliderRight;
     public float height = 0f;
     bool attached, cameraNeedSmooth = false, smoothCompleted = false;
     float smoothSpeed = 4f;
+    public float SpawnDistance = 20f;
 
     private void Start()
     {
         transform.position = new Vector3(initialPositionOfCamera.position.x, height, -12);
+        checkCollision();
+        moveSpawns();
     }
 
     bool UpdatedAttached()
@@ -42,6 +47,7 @@ public class CameraFollow : MonoBehaviour
     {
         // check if the camera needs to be attached
         attached = UpdatedAttached();
+        moveSpawns();
 
         // after a wave, if the player is in the right side of the camera, it will need to move smoothly
         if (cameraNeedSmooth && !smoothCompleted)
@@ -60,6 +66,24 @@ public class CameraFollow : MonoBehaviour
         // if attached the camera moves, else it stops
         else if (Player != null && transform.position.x <= Player.position.x && attached)
             transform.position = new Vector3(Player.position.x, height, -12);
+    }
+
+    //Modify collision box if distance changes
+    private void checkCollision()
+    {
+        float halfHeight = camera.orthographicSize;
+        float halfWidth = camera.aspect * halfHeight;
+        colliderLeft.GetComponent<BoxCollider2D>().size = new Vector2(1, 100);
+        colliderRight.GetComponent<BoxCollider2D>().size = new Vector2(1, 100);
+    }
+
+    //Move spawns to the desired position
+    private void moveSpawns()
+    {
+        float halfHeight = camera.orthographicSize;
+        float halfWidth = camera.aspect * halfHeight;
+        colliderLeft.transform.position = new Vector3(camera.gameObject.transform.position.x - halfWidth, 2, 0);
+        colliderRight.transform.position = new Vector3(camera.gameObject.transform.position.x + halfWidth, 2, 0);
     }
 }
 

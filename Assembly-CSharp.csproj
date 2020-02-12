@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{06480927-CD47-3F94-93DF-4B3DE368B232}</ProjectGuid>
+    <ProjectGuid>{B50D2677-0714-09AF-DF6A-4F48711E54E9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraBounds.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss_Run.cs" />
     <Compile Include="Assets\Scripts\Boss\BossHealth.cs" />
     <Compile Include="Assets\Scripts\Bullet\BulletScript.cs" />
@@ -77,37 +78,43 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement2D.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Player\ShieldScript.cs" />
+    <Compile Include="Assets\Scripts\ToChange\CharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\ToChange\EnemyBehavior2D.cs" />
+    <Compile Include="Assets\Scripts\ToChange\OurGuyMovement.cs" />
+    <Compile Include="Assets\Scripts\ToChange\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\ToChange\SpawnEnemies.cs" />
+    <Compile Include="Assets\Scripts\ToChange\WaveController.cs" />
     <Compile Include="Assets\Scripts\UI\BossHealthBar.cs" />
     <Compile Include="Assets\Scripts\UI\FillStatusBar.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Users/Mike/Documents/Erasmus/Project Course on Game Development/Subject14/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Users/Mike/Documents/GitHub/Subject-14/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
