@@ -46,7 +46,7 @@ public class PlayerCombat : MonoBehaviour
     {
         Punch();
         Kick();
-        EyeBeam();
+        Shoot();
         Shield();
     }
 
@@ -109,24 +109,30 @@ public class PlayerCombat : MonoBehaviour
             }
         }  
     }
-    private void EyeBeam()
+    private void Shoot()
     {
         if (Input.GetButtonDown("Fire3"))
         {
-            if (playerStats.currentMana >= eyeBeamSpellCost)
-            {
-                print("pewpew...");
-                //myAnimator.SetTrigger("shoot");
-                Instantiate(bulletRef, bulletPos.position, bulletPos.rotation);
-                playerStats.ReduceMana(eyeBeamSpellCost);
-            }
-            else
-            {
-                print("not enough mana");
-                return;
-            }
+            myAnimator.SetTrigger("laser");
         }
     }
+
+    private void EyeBeam()
+    {
+        if (playerStats.currentMana >= eyeBeamSpellCost)
+        {
+            print("pewpew...");
+            //myAnimator.SetTrigger("shoot");
+            Instantiate(bulletRef, bulletPos.position, bulletPos.rotation);
+            playerStats.ReduceMana(eyeBeamSpellCost);
+        }
+        else
+        {
+            print("not enough mana");
+            return;
+        }
+    }
+
     private void Shield()
     {
         if (Input.GetButtonDown("Ability1"))
