@@ -4,24 +4,25 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public KeyCode interactKey;
     private bool colliderActive = true;
     public bool gotKeyCard = false;
-    public bool doorClosed = true;
+    public bool isDoorClosed = true;
+
+    private Animator animator;
 
     public Transform playerPos;
-
     public PlayerInventory playerInv;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Distance between door and player: " + Vector2.Distance(this.transform.position, playerPos.position));
+        //Debug.Log("Distance between door and player: " + Vector2.Distance(this.transform.position, playerPos.position));
         CloseDoor();
     }
 
@@ -29,9 +30,9 @@ public class DoorScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Player is in range door");
             playerPos = collision.gameObject.GetComponent<Transform>();
             DoorInteraction();
-            Debug.Log("Player is in range door");
         }
     }
 
@@ -48,22 +49,22 @@ public class DoorScript : MonoBehaviour
         CheckIfHasKeyCard();
         if (gotKeyCard)
         {
-            Debug.Log("able to interact with door");
-            if (doorClosed)
+            Debug.Log("got keycard and able to interact with door");
+            if (isDoorClosed)
             {
-                Debug.Log("player is opening door");
-                doorClosed = false;
+                Debug.Log("door is opening...");
+                //animation
+                Debug.Log("should play open animation");
+                animator.SetTrigger("opening");
+                isDoorClosed = false;
                 colliderActive = false;
-                //play ui element 
                 gameObject.GetComponent<BoxCollider2D>().enabled = colliderActive;
-                //change sprite of door
                 Debug.Log("boxcollider of door should be disabled");
             }
         }
         else
         {
             Debug.Log("no key card");
-            gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
 
@@ -75,14 +76,16 @@ public class DoorScript : MonoBehaviour
 
     private void CloseDoor()
     {
-        if (!colliderActive && Vector2.Distance(this.transform.position, playerPos.position) > 2.6)
+        if (!colliderActive && Vector2.Distance(this.transform.position, playerPos.position) > 4.2)
         {
             Debug.Log("Closing door...");
             colliderActive = true;
             gameObject.GetComponent<BoxCollider2D>().enabled = colliderActive;
             Debug.Log("collider of door should be activated");
-            //change sprite of door to closed 
-            doorClosed = true;
+            isDoorClosed = true;
+            //animation
+            Debug.Log("should play close animation");
+            animator.SetTrigger("closing");
         }
     }
 }

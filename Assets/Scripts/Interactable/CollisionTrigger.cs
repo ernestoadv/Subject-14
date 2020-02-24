@@ -9,8 +9,12 @@ public class CollisionTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        animator.updateMode = AnimatorUpdateMode.UnscaledTime; //So that the animation does not freeze when pausing the game
-        Time.timeScale = 0; //Freeze the game
-        animator.SetTrigger("fade"); //Fade in
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            animator.updateMode = AnimatorUpdateMode.UnscaledTime; //So that the animation does not freeze when pausing the game
+            Time.timeScale = 0; //Freeze the game
+            animator.SetTrigger("fade"); //Fade in
+        }
+
     }
 }
