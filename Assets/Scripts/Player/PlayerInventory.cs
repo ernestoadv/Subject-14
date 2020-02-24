@@ -18,6 +18,11 @@ public class PlayerInventory : MonoBehaviour
         
     }
 
+    public bool returnKeyInfo()
+    {
+        return foundKeyCardOne;
+    }
+
     public void PickUpKey(int value)
     {
         switch (value)

@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
     public KeyCode interactKey;
     public UnityEvent interactAction;
 
+    public string whatAmI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,7 @@ public class Interactable : MonoBehaviour
         {
             if (Input.GetKeyDown(interactKey))
             {
+                Debug.Log("player is interacting");
                 interactAction.Invoke(); //fire event
             }
         }
