@@ -566,7 +566,7 @@ MonoBehaviour:
   startWalkingDistance: 14
   startTimeBtwShots: 1.7
   player: {fileID: 1381830765}
-  isFlipped: 0
+  isFlipped: 1
 --- !u!212 &243590977
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3083,7 +3083,7 @@ MonoBehaviour:
   startWalkingDistance: 14
   startTimeBtwShots: 1.7
   player: {fileID: 1381830765}
-  isFlipped: 0
+  isFlipped: 1
 --- !u!212 &1469755320
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4627,7 +4627,7 @@ SpriteRenderer:
   m_Size: {x: 30.043348, y: 3.3300002}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2139148351
@@ -4824,6 +4824,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1381830765}
+    - target: {fileID: 9140049092460968724, guid: 5e05a8a85b27f8945bbcf6e874c5a933,
+        type: 3}
+      propertyPath: isFlipped
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9140049092460968725, guid: 5e05a8a85b27f8945bbcf6e874c5a933,
         type: 3}
       propertyPath: player
