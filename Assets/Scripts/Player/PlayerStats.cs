@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Die();
     }
 
     public int getCurrentHealth()
@@ -43,13 +44,15 @@ public class PlayerStats : MonoBehaviour
     {
         print("player is getting dmg");
         animator.SetTrigger("hurt");
-        currentHealth -= dmg;
+        currentHealth = currentHealth > 0 ? currentHealth - dmg : 0;
+        GameObject.Find("HealthText").GetComponent<Text>().text = "HP " + currentHealth + "/100";
     }
 
     public void ReduceMana(int mana)
     {
         print("mana should be reduced");
-        currentMana -= mana;
+        currentMana = currentMana > 0 ? currentMana - mana : 0;
+        GameObject.Find("ManaText").GetComponent<Text>().text = "MP " + currentMana + "/75";
     }
 
     private bool GetPlayerStatus()

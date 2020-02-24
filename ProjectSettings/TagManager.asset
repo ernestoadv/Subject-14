@@ -8,6 +8,7 @@ TagManager:
   - Boss
   - Enemy
   - Shield
+  - Animal
   layers:
   - Default
   - TransparentFX

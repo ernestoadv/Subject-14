@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &115250588
 Transform:
   m_ObjectHideFlags: 0
@@ -231,7 +231,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 115250587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.6, y: 4, z: 0}
+  m_LocalPosition: {x: 10.46, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 920366857}
@@ -477,12 +477,12 @@ PrefabInstance:
     - target: {fileID: 9004647944564084919, guid: 47e1209efd54a004e8261272a812a47b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.899892
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 9004647944564084919, guid: 47e1209efd54a004e8261272a812a47b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.875761
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 9004647944564084919, guid: 47e1209efd54a004e8261272a812a47b,
         type: 3}
@@ -1518,7 +1518,7 @@ GameObject:
   - component: {fileID: 1094109092}
   - component: {fileID: 1094109091}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  levelToLoad: 3
+  levelToLoad: 4
 --- !u!114 &1761344913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,7 +2427,7 @@ GameObject:
   - component: {fileID: 1807625145}
   - component: {fileID: 1807625144}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ManaText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2726,7 +2726,7 @@ PrefabInstance:
     - target: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.03
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
@@ -2793,21 +2793,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.79
       objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548302, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548302, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548302, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 838611593975548300, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2832,6 +2817,21 @@ PrefabInstance:
         type: 3}
       propertyPath: currentMana
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548302, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548302, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548302, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc8172da65c7db49aa5cc079e22220f, type: 3}

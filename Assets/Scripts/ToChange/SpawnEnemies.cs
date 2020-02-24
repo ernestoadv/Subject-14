@@ -172,30 +172,30 @@ public class SpawnEnemies : MonoBehaviour
 
         //Health
 
-        if(enemyValues.GetComponent<EnemyBehavior2D>().health >= 14)
+        /*if(enemyValues.GetComponent<Animal>().health >= 14)
         {
-            randomHealth = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<EnemyBehavior2D>().health / 5, enemyValues.GetComponent<EnemyBehavior2D>().health / 5));
+            randomHealth = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<Animal>().health / 5, enemyValues.GetComponent<Animal>().health / 5));
         }
         else
         {
-            randomHealth = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<EnemyBehavior2D>().health / 3, (enemyValues.GetComponent<EnemyBehavior2D>().health / 3) + 1));
+            randomHealth = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<Animal>().health / 3, (enemyValues.GetComponent<Animal>().health / 3) + 1));
         }
 
         //Damage
 
-        if (enemyValues.GetComponent<EnemyBehavior2D>().health >= 7)
+        if (enemyValues.GetComponent<Animal>().health >= 7)
         {
-            randomDamage = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<EnemyBehavior2D>().damage / 3, enemyValues.GetComponent<EnemyBehavior2D>().damage / 3));
+            randomDamage = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<Animal>().damage / 3, enemyValues.GetComponent<Animal>().damage / 3));
         }
         else
         {
-            randomDamage = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<EnemyBehavior2D>().damage / 2, (enemyValues.GetComponent<EnemyBehavior2D>().damage / 2) + 1));
+            randomDamage = Mathf.RoundToInt(Random.Range(-enemyValues.GetComponent<Animal>().damage / 2, (enemyValues.GetComponent<Animal>().damage / 2) + 1));
         }
 
         //Modify enemy values
 
-        enemyValues.GetComponent<EnemyBehavior2D>().health += randomHealth;
-        enemyValues.GetComponent<EnemyBehavior2D>().damage += randomDamage;
+        //enemyValues.GetComponent<Animal>().health += randomHealth;
+        enemyValues.GetComponent<Animal>().damage += randomDamage;*/
     }
 
     //Initiates a wave and spawns enemies

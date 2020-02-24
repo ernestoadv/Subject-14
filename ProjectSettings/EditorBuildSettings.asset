@@ -10,11 +10,17 @@ EditorBuildSettings:
     guid: 17d9580ac1bce3146a0290698011853b
   - enabled: 1
     path: Assets/Scenes/1 - Lab.unity
-    guid: 566eac30ec0d5af478e04330ecb9d03d
+    guid: 35e86bb601e6eae478b22aa40dc9c2ee
   - enabled: 1
     path: Assets/Scenes/2 - Lab.unity
     guid: 8f1a5d733de2fc643a225354b04ad8d0
   - enabled: 1
     path: Assets/Scenes/3 - Boss.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/4 - Dessert.unity
+    guid: e476a4623b7e6aa4492cac082c186db6
+  - enabled: 1
+    path: Assets/Scenes/5 - Forest.unity
+    guid: 6896ded91099bf1418fbbbbec432160d
   m_configObjects: {}

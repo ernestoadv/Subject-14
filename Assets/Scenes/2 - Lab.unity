@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 224427863}
   - component: {fileID: 224427862}
   m_Layer: 5
-  m_Name: Text
+  m_Name: HealthText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 345668974}
   - component: {fileID: 345668973}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ManaText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1670,7 +1670,6 @@ GameObject:
   - component: {fileID: 856764334}
   - component: {fileID: 856764333}
   - component: {fileID: 856764332}
-  - component: {fileID: 856764331}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1692,18 +1691,6 @@ Transform:
   m_Father: {fileID: 235020004}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &856764331
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856764329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3b9561f760edde45b5756929fd438e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &856764332
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,7 +31,7 @@ public class BulletScript : MonoBehaviour
                 Debug.Log("We hit " + enemy.name + " with " + dmg);
                 enemy.GetComponent<BossHealth>().BossTakeDamage(dmg);
             }
-            if (enemy.CompareTag("Player"))
+            else if (enemy.CompareTag("Player"))
             {
                 Debug.Log("We hit " + enemy.name + " with " + dmg);
                 enemy.GetComponent<PlayerStats>().TakeDamage(dmg);

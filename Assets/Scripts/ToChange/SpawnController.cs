@@ -33,7 +33,7 @@ public class SpawnController : MonoBehaviour
         for(int i = 0; i < enemies.Length; i++)
         {
             enemies[i].transform.parent = null;
-            enemies[i].GetComponent<EnemyBehavior2D>().player = GameObject.Find("Our_guy");
+            enemies[i].GetComponent<Animal>().player = GameObject.Find("Our_guy");
         }
     }
 
