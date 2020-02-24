@@ -23,12 +23,18 @@ public class PlayerStats : MonoBehaviour
         maxMana = 75;
         currentMana = maxMana;
         animator = GetComponent<Animator>();
+        InvokeRepeating("RecoverManaOverTime", 2.0f, 1.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
         Die();
+    }
+
+    private void FixedUpdate()
+    {
+
     }
 
     public int getCurrentHealth()
@@ -58,6 +64,21 @@ public class PlayerStats : MonoBehaviour
     private bool GetPlayerStatus()
     {
         return isAlive;
+    }
+
+    private void RecoverManaOverTime()
+    {
+        Debug.Log("Recovering mana overtime function");
+        if(currentMana < 75)
+        {
+            Debug.Log("recovering mana...");
+            currentMana += 2;
+        }
+        else if(currentMana == maxMana)
+        {
+            Debug.Log("Mana full");
+            return;
+        }
     }
 
     private void Die()
