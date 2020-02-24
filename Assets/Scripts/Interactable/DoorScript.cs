@@ -49,6 +49,7 @@ public class DoorScript : MonoBehaviour
         if (gotKeyCard)
         {
             Debug.Log("able to interact with door");
+            GameObject.Find("LevelEnd").GetComponent<BoxCollider2D>().enabled = true;
             if (doorClosed)
             {
                 Debug.Log("player is opening door");

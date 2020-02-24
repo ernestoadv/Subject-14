@@ -73,6 +73,7 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.Log("recovering mana...");
             currentMana += 2;
+            GameObject.Find("ManaText").GetComponent<Text>().text = "MP " + currentMana + "/75";
         }
         else if(currentMana == maxMana)
         {

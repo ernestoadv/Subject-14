@@ -64,7 +64,7 @@ public class CameraFollow : MonoBehaviour
             }
         }
         // if attached the camera moves, else it stops
-        else if (Player != null && transform.position.x <= Player.position.x && attached)
+        else if (Player != null && attached) //&& transform.position.x <= Player.position.x && attached)
             transform.position = new Vector3(Player.position.x, height, -12);
     }
 
