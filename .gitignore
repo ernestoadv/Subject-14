@@ -413,3 +413,8 @@ obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
 .vs/Subject-14/v15/.suo
 .vs/Subject-14/v15/Server/sqlite3/storage.ide-shm
 .vs/Subject-14/v15/Server/sqlite3/storage.ide-wal
+*.json
+*.pdb
+*.dll
+*.txt
+*.asset

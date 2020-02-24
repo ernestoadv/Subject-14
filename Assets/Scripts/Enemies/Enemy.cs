@@ -24,12 +24,12 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //LookAtPlayer();
+        LookAtPlayer();
     }
 
     public void LookAtPlayer()
     {
-        /*Vector3 flipped = transform.localScale;
+        Vector3 flipped = transform.localScale;
         flipped.z *= -1f;
 
         if(transform.position.x > player.position.x && isFlipped)
@@ -43,7 +43,7 @@ public class Enemy : MonoBehaviour
             transform.localScale = flipped;
             transform.Rotate(0f, 180f, 0f);
             isFlipped = true;
-        }*/
+        }
     }
 
     public void TakeDamage(int dmg)
