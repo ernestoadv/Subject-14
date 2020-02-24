@@ -3414,6 +3414,7 @@ GameObject:
   - component: {fileID: 1447388063}
   - component: {fileID: 1447388062}
   - component: {fileID: 1447388064}
+  - component: {fileID: 1447388065}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -3474,9 +3475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8091892f831a50345bf23e0a136dcc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactKey: 101
   gotKeyCard: 0
-  doorClosed: 1
+  isDoorClosed: 1
   playerPos: {fileID: 977985690}
   playerInv: {fileID: 447254273}
 --- !u!212 &1447388064
@@ -3528,6 +3528,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1447388065
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447388060}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: acc87c7539d6bdd43bab8cdf5f0db545, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1499958024
 GameObject:
   m_ObjectHideFlags: 0

@@ -38,6 +38,7 @@ public class BossHealth : MonoBehaviour
         Destroy(gameObject);
         Destroy(GameObject.Find("BossSlider"));
         GameObject.Find("LevelEnd").GetComponent<BoxCollider2D>().enabled = true;
+        GameObject.Find("Player").GetComponent<PlayerInventory>().foundKeyCardOne = true;
     }
 
     public void TransformUI()

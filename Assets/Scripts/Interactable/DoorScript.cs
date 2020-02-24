@@ -49,7 +49,6 @@ public class DoorScript : MonoBehaviour
         CheckIfHasKeyCard();
         if (gotKeyCard)
         {
-            GameObject.Find("LevelEnd").GetComponent<BoxCollider2D>().enabled = true;
             Debug.Log("got keycard and able to interact with door");
             if (isDoorClosed)
             {
@@ -62,6 +61,10 @@ public class DoorScript : MonoBehaviour
                 gameObject.GetComponent<BoxCollider2D>().enabled = colliderActive;
                 Debug.Log("boxcollider of door should be disabled");
             }
+            else if(Vector2.Distance(this.transform.position, playerPos.position) < 4.2)
+            {
+                GameObject.Find("LevelEnd").GetComponent<BoxCollider2D>().enabled = true;
+            }
         }
         else
         {
@@ -71,13 +74,13 @@ public class DoorScript : MonoBehaviour
 
     private void CheckIfHasKeyCard()
     {
-        Debug.Log("keycard = " + gotKeyCard);
         gotKeyCard = playerInv.returnKeyInfo();
+        Debug.Log("keycard = " + gotKeyCard);
     }
 
     private void CloseDoor()
     {
-        if (!colliderActive && Vector2.Distance(this.transform.position, playerPos.position) > 4.2)
+        if (!colliderActive && Vector2.Distance(this.transform.position, playerPos.position) > 7.2)
         {
             Debug.Log("Closing door...");
             colliderActive = true;
@@ -87,6 +90,10 @@ public class DoorScript : MonoBehaviour
             //animation
             Debug.Log("should play close animation");
             animator.SetTrigger("closing");
+        }
+        else if(Vector2.Distance(this.transform.position, playerPos.position) < 7.2)
+        {
+            DoorInteraction();
         }
     }
 }
