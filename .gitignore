@@ -61,3 +61,7 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+.vs/Subject-14/v16/.suo
+*.ide
+*.meta
+*.dwlt
