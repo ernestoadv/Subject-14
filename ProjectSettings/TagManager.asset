@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Shield
   - Animal
+  - EnemyShootPos
+  - HumanPlayer
+  - Destroyable
   layers:
   - Default
   - TransparentFX
@@ -29,7 +32,7 @@ TagManager:
   - BirthingPod
   - Door
   - KeyCard
-  - 
+  - Destroyable
   - 
   - 
   - 
@@ -54,6 +57,9 @@ TagManager:
     locked: 0
   - name: Interactable
     uniqueID: 338916745
+    locked: 0
+  - name: KeyCard
+    uniqueID: 2699983761
     locked: 0
   - name: Player
     uniqueID: 963650527

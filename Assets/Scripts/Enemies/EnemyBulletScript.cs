@@ -4,35 +4,33 @@ using UnityEngine;
 
 public class EnemyBulletScript : MonoBehaviour
 {
-    private float speed = 150f;
+    private float bulletSpeed = 12f;
     public int bulletDmg = 5;
 
-    private Transform player;
-
-    private Rigidbody2D rigidBody;
+    public Transform playerPos;
     private Vector2 target;
 
     public Transform bulletPos;
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        rigidBody = GetComponent<Rigidbody2D>();
-        //bulletPos = GetComponent<EnemyShooting>().GetBulletPos();
-      
+        playerPos = GameObject.FindGameObjectWithTag("HumanPlayer").transform;
+        target = new Vector2(playerPos.position.x, playerPos.position.y);
+        Invoke("DestroyBullet", 3.0f);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void Update()
     {
-        rigidBody.velocity = player.position * speed * Time.deltaTime;
-        //target = new Vector2(player.position.x, player.position.y);
-        Invoke("DestroyBullet", .5f);
+        transform.position = Vector2.MoveTowards(transform.position, target, bulletSpeed * Time.deltaTime);
+        if(transform.position.x == target.x && transform.position.y == target.y)
+        {
+            DestroyBullet();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("HumanPlayer"))
         {
             Debug.Log("Enemy bullet hit the player for " + bulletDmg + " dmg");
             collision.gameObject.GetComponent<PlayerStats>().TakeDamage(bulletDmg);
@@ -41,6 +39,11 @@ public class EnemyBulletScript : MonoBehaviour
         if (collision.CompareTag("Shield"))
         {
             Debug.Log("Enemy bullet hit player shield");
+            DestroyBullet();
+        }
+        if (collision.CompareTag("Interactable"))
+        {
+            Debug.Log("Enemy bullet hit interactable object");
             DestroyBullet();
         }
     }

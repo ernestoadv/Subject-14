@@ -11,13 +11,11 @@ public class Enemy : MonoBehaviour
     private int maxHealth = 100;
     public int currentHealth;
 
-    private Rigidbody2D myRigidBody;
     private Animator myAnimator;
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-        myRigidBody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
     }
 
@@ -51,14 +49,12 @@ public class Enemy : MonoBehaviour
         Debug.Log("calling takedmg function of enemy");
         currentHealth -= dmg;
 
-        //play hurt animation
-
         myAnimator.SetTrigger("hurt");
         if(currentHealth <= 0)
         {
             myAnimator.SetBool("death", true);
+            //DIE ANIMATION? here or in the die function
             Invoke("Die", .5f);
-            //Die();
         }
     }
 
@@ -67,6 +63,5 @@ public class Enemy : MonoBehaviour
         Debug.Log("enemy died");
         //die animation
         Destroy(gameObject);
-        //destroy enemy object 
     }
 }

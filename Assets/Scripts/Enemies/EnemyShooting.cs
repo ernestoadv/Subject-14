@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-    public GameObject bulletRef;
-    public Transform bulletPos;
-
-    public float speed;
-    public float retreatSpeed;
+    public float enemySpeed;
     public float stoppingDistance;
     public float retreatDistance;
-    public float startWalkingDistance;
+    public float retreatSpeed;
 
-    private float timeBtwShots;
-    //every 2 seconds
-    public float startTimeBtwShots =  2f;
+    public Transform playerPos;
 
-    public Transform player;
     private Animator myAnimator;
 
-    public bool isFlipped = false;
+    private float timeBtwShots;
+    public float startTimeBtwShots = 2f;
+
+    public GameObject enemyBulletRef;
+    public Transform bulletPos;
+
+
+
+
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
         myAnimator = GetComponent<Animator>();
         timeBtwShots = startTimeBtwShots;
     }
@@ -33,197 +33,54 @@ public class EnemyShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShootBullet();
-        LookAtPlayer();
+        MovementSoldier();
     }
 
-    public void LookAtPlayer()
+    //enemy movement function - moving towards, stoping and retreating
+    private void MovementSoldier()
     {
-        Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
-
-        if (transform.position.x > player.position.x && isFlipped)
+        //if distance between player and enemy is greater than the stopping distance the enemy moves towards the player. 
+        if (Vector2.Distance(transform.position, playerPos.position) > stoppingDistance)
         {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = false;
-        }
-        if (transform.position.x < player.position.x && !isFlipped)
-        {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = true;
-        }
-    }
-
-    private void ShootBullet()
-    {
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance && Vector2.Distance(transform.position, player.position) <= startWalkingDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            myAnimator.SetBool("walk", true);
-        }
-        else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
-        {
-            transform.position = this.transform.position;
-            myAnimator.SetBool("walk", false);
-        }
-
-        if (timeBtwShots <= 0)
-        {
-            Debug.Log("shooting enemy projectile");
-            myAnimator.SetTrigger("shoot");
-            Instantiate(bulletRef, bulletPos.position, bulletPos.rotation);
-            timeBtwShots = startTimeBtwShots;
-        }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
-    }
-    /*
-    private void ShootBullet()
-    {
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            myAnimator.SetBool("walk", true);
-        }
-        else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
-        {
-            transform.position = this.transform.position;
-            myAnimator.SetBool("walk", false);
-        }
-        else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -retreatSpeed * Time.deltaTime);
-            myAnimator.SetBool("walk", true);
-        }
-
-        if (timeBtwShots <= 0)
-        {
-            Debug.Log("shooting enemy projectile");
-            myAnimator.SetTrigger("shoot");
-            Instantiate(bulletRef, bulletPos.position, bulletPos.rotation);
-            timeBtwShots = startTimeBtwShots;
-        }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
-    }*/
-
-}
-
-
-
-/*
- * Trying to retreat, shoot, continue retreating
- * using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class EnemyShooting : MonoBehaviour
-{
-    public GameObject bulletRef;
-    public Transform bulletPos;
-
-    public float speed;
-    public float retreatSpeed;
-    public float stoppingDistance;
-    public float retreatDistance;
-
-    private float timeBtwShots;
-    //every 2 seconds
-    public float startTimeBtwShots =  2f;
-
-    public Transform player;
-    private Animator myAnimator;
-
-    public bool isFlipped = false;
-    public bool isRetreating = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        myAnimator = GetComponent<Animator>();
-        timeBtwShots = startTimeBtwShots;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        ShootBullet();
-        if(!isRetreating)
-            LookAtPlayer();
-    }
-
-    public void LookAtPlayer()
-    {
-        Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
-
-        if (transform.position.x > player.position.x && isFlipped)
-        {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = false;
-        }
-        if (transform.position.x < player.position.x && !isFlipped)
-        {
-            transform.localScale = flipped;
-            transform.Rotate(0f, 180f, 0f);
-            isFlipped = true;
-        }
-        isRetreating = false;
-    }
-
-    private void Retreat()
-    {
-        Vector3 flipped = transform.localScale;
-        flipped.z *= -1f;
-
-        transform.localScale = flipped;
-        transform.Rotate(0f, 180f, 0f);
-    }
-
-    private void ShootBullet()
-    {
-        if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            Debug.Log("Enemy should move towards player...");
+            transform.position = Vector2.MoveTowards(transform.position, playerPos.position, enemySpeed * Time.deltaTime);
             myAnimator.SetBool("walk", true);
             myAnimator.SetBool("idle", false);
         }
-        else if (Vector2.Distance(transform.position, player.position) < stoppingDistance && Vector2.Distance(transform.position, player.position) > retreatDistance)
+        //if distance is between stopping distance and retreatdistance - enemy does not move 
+        else if (Vector2.Distance(transform.position, playerPos.position) < stoppingDistance && Vector2.Distance(transform.position, playerPos.position) > retreatDistance)
         {
+            Debug.Log("Enemy should stop moving");
             transform.position = this.transform.position;
             myAnimator.SetBool("walk", false);
             myAnimator.SetBool("idle", true);
-            isRetreating = false;
+            ShootBullet();
         }
-        else if (Vector2.Distance(transform.position, player.position) < retreatDistance)
+        //if distance between the two is smaller than the retreatdistance the enemies moves backwards. "retreats"
+        else if (Vector2.Distance(transform.position, playerPos.position) < retreatDistance)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.position, -retreatSpeed * Time.deltaTime);
+            Debug.Log("Enemy should retreat..");
+            transform.position = Vector2.MoveTowards(transform.position, playerPos.position, -retreatSpeed * Time.deltaTime);
             myAnimator.SetBool("walk", true);
             myAnimator.SetBool("idle", false);
-            if(!isRetreating)
-                Retreat();
-            isRetreating = true;
+            ShootBullet();
         }
+    }
 
+    private void ShootBullet()
+    {
         if (timeBtwShots <= 0)
         {
             Debug.Log("shooting enemy projectile");
+            myAnimator.SetBool("idle", false);
             myAnimator.SetTrigger("shoot");
-            Instantiate(bulletRef, bulletPos.position, bulletPos.rotation);
+            Instantiate(enemyBulletRef, bulletPos.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
         }
         else
         {
+            //reducing time btw shots
             timeBtwShots -= Time.deltaTime;
         }
     }
 }
-*/

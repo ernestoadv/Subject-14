@@ -80,7 +80,7 @@ public class DoorScript : MonoBehaviour
 
     private void CloseDoor()
     {
-        if (!colliderActive && Vector2.Distance(this.transform.position, playerPos.position) > 7.2)
+        if (!colliderActive && Vector2.Distance(this.transform.position, playerPos.position) > 5.1)
         {
             Debug.Log("Closing door...");
             colliderActive = true;
@@ -91,7 +91,7 @@ public class DoorScript : MonoBehaviour
             Debug.Log("should play close animation");
             animator.SetTrigger("closing");
         }
-        else if(Vector2.Distance(this.transform.position, playerPos.position) < 7.2)
+        else if(Vector2.Distance(this.transform.position, playerPos.position) < 5.1)
         {
             DoorInteraction();
         }
