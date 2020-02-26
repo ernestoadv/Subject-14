@@ -1312,6 +1312,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548296, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_TagString
+      value: HumanPlayer
+      objectReference: {fileID: 0}
     - target: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2771,7 +2776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1447388060}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.259, y: 2.254, z: 0}
+  m_LocalPosition: {x: 20.259, y: 2.15, z: 0}
   m_LocalScale: {x: 0.8721377, y: 0.87811005, z: 1}
   m_Children:
   - {fileID: 126545736}
@@ -2866,7 +2871,7 @@ SpriteRenderer:
   m_Size: {x: 9.26, y: 9.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1447388065

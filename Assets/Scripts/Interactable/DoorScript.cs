@@ -28,7 +28,7 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("HumanPlayer"))
         {
             Debug.Log("Player is in range door");
             playerPos = collision.gameObject.GetComponent<Transform>();
@@ -38,7 +38,7 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("HumanPlayer"))
         {
             Debug.Log("Player is NOT in range with door");
         }
