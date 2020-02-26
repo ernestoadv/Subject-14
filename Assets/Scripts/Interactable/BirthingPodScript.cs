@@ -23,7 +23,7 @@ public class BirthingPodScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("HumanPlayer"))
         {
             isInRange = true;
             Debug.Log("Player is in range of birthingPod object");
@@ -32,7 +32,7 @@ public class BirthingPodScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("HumanPlayer"))
         {
             isInRange = false;
             Debug.Log("Player is NOT in range with birthingPod");

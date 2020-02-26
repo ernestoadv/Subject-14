@@ -15,7 +15,7 @@ public class Boss_Run : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         boss = animator.GetComponent<Enemy>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("HumanPlayer").transform;
         rb = animator.GetComponent<Rigidbody2D>();
     }
 

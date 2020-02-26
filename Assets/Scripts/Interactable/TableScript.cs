@@ -21,7 +21,7 @@ public class TableScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("HumanPlayer"))
         {
             isInRange = true;
             Debug.Log("Player is in range of table object");
@@ -30,7 +30,7 @@ public class TableScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("HumanPlayer"))
         {
             isInRange = false;
             Debug.Log("Player is NOT in range with table");
