@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScienceBoardScript : MonoBehaviour
 {
     public KeyCode interactKey;
     public bool isInRange = false;
+    public DialogueManager dialogueManager;
+    public Dialogue dialogue;
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +46,7 @@ public class ScienceBoardScript : MonoBehaviour
         {
             Debug.Log("player is interacting with scienceboard");
             //play ui element 
+            dialogueManager.StartDialogue(dialogue);
         }
     }
 

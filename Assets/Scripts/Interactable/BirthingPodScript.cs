@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BirthingPodScript : MonoBehaviour
 {
+    private Dialogue dialogue;
     public KeyCode interactKey;
     public bool isInRange = false;
 
@@ -34,6 +36,7 @@ public class BirthingPodScript : MonoBehaviour
         {
             isInRange = false;
             Debug.Log("Player is NOT in range with birthingPod");
+            FindObjectOfType<DialogueManager>().EndDialogue();
         }
     }
 
@@ -43,6 +46,9 @@ public class BirthingPodScript : MonoBehaviour
         {
             Debug.Log("player is interacting with Pod");
             //play ui element 
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+
         }
     }
 }
