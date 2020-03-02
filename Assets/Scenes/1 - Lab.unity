@@ -3994,7 +3994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  levelToLoad: 2
+  levelToLoad: 3
 --- !u!95 &1927245314
 Animator:
   serializedVersion: 3
