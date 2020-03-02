@@ -93,6 +93,8 @@
     <Compile Include="Assets\Scripts\UI\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\UI\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\UI\FillStatusBar.cs" />
+    <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />
     <Compile Include="Assets\Sprites\Background\Parallax.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
