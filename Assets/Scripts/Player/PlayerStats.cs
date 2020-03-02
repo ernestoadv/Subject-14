@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -84,13 +85,18 @@ public class PlayerStats : MonoBehaviour
 
     private void Die()
     {
-        if(currentHealth <= 0)
+        if(currentHealth <= 0 && isAlive)
         {
             print("player should die");
             isAlive = false;
-            //die animation
-            //game over screen
+            animator.SetTrigger("death");
         }
+    }
+
+    private void DestroyPlayer()
+    {
+        Destroy(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Load same level
     }
 
 }

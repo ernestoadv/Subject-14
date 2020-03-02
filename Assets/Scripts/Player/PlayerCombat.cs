@@ -139,10 +139,9 @@ public class PlayerCombat : MonoBehaviour
         {
             if(playerStats.currentMana >= shieldSpellCost)
             {
-                //GetComponent<PlayerMovement2D>().enabled = false;
+                GetComponent<PlayerMovement2D>().enabled = false;
                 print("shielding...");
-                Instantiate(shieldRef, shieldPos.position, shieldPos.rotation);
-                //myAnimator.SetTrigger("kick");
+                myAnimator.SetTrigger("shield");
                 playerStats.ReduceMana(shieldSpellCost);
             }
             else
@@ -151,11 +150,20 @@ public class PlayerCombat : MonoBehaviour
                 return;
             }
         }
+
         if (Input.GetButtonUp("Ability1"))
         {
-            //GetComponent<PlayerMovement2D>().enabled = true;
+            myAnimator.enabled = true;
+            myAnimator.SetTrigger("unshield");
+            GetComponent<PlayerMovement2D>().enabled = true;
         }
 
+    }
+
+    private void StopShield()
+    {
+        myAnimator.enabled = false;
+        Instantiate(shieldRef, shieldPos.position, shieldPos.rotation);
     }
 
     private void InitPlayer()

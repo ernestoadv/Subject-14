@@ -9,7 +9,6 @@ public class BossHealth : MonoBehaviour
     private Animator animator;
     private Camera camera;
     private RectTransform posUI;
-    private Vector2 posBoss;
     public bool isInvulnerable = false;
 
     public void BossTakeDamage(int dmg)

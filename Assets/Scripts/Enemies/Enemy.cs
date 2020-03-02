@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public bool isFlipped = false;
 
     //health variable for "normal" enemies
-    private int maxHealth = 100;
+    public int maxHealth = 100;
     public int currentHealth;
 
     private Animator myAnimator;
