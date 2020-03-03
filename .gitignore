@@ -63,7 +63,6 @@ sysinfo.txt
 crashlytics-build.properties
 .vs/Subject-14/v16/.suo
 *.ide
-*.meta
 *.dwlt
 Library/StateCache/SceneView/93c9a0-mainStage.json
 Library/StateCache/Hierarchy/30a00d-mainStage.json
