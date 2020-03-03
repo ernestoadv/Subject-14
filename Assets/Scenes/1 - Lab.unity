@@ -1164,6 +1164,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.6020001
       objectReference: {fileID: 0}
+    - target: {fileID: 838611594295499292, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: currentMana
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 838611594408328399, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1173,11 +1178,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611594295499292, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: currentMana
-      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc8172da65c7db49aa5cc079e22220f, type: 3}
@@ -2067,6 +2067,7 @@ Transform:
   - {fileID: 22905184}
   - {fileID: 1882753008}
   - {fileID: 1447388061}
+  - {fileID: 1315243191}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2305,6 +2306,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261842471}
   m_CullTransparentMesh: 0
+--- !u!1 &1315243190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315243191}
+  - component: {fileID: 1315243193}
+  - component: {fileID: 1315243192}
+  m_Layer: 0
+  m_Name: Player Dialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1315243191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315243190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.88, y: 0.49, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1124491098}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1315243192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315243190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4ef88b5aa91f9409ce632bb51d5acb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 101
+  dialogueManager: {fileID: 1878149886}
+  dialogue:
+    name: '.....'
+    sentences:
+    - This place looks familiar...
+--- !u!70 &1315243193
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315243190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 5, y: 1}
+  m_Direction: 0
 --- !u!4 &1447388061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3276760814269491230, guid: 663eacbb14798014faa3e57f8722a3dd,
@@ -2340,7 +2407,7 @@ RectTransform:
   m_GameObject: {fileID: 1499958024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.72999996, y: 0.72999996, z: 0.72999996}
+  m_LocalScale: {x: 0.55095285, y: 0.55095285, z: 0.55095285}
   m_Children:
   - {fileID: 1878149885}
   - {fileID: 1261842472}
@@ -2463,7 +2530,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.1900177, y: 0}
+  m_AnchoredPosition: {x: -0.80000305, y: 0}
   m_SizeDelta: {x: -10.4, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1844115707
@@ -2817,6 +2884,7 @@ GameObject:
   - component: {fileID: 2109858084}
   - component: {fileID: 2109858086}
   - component: {fileID: 2109858085}
+  - component: {fileID: 2109858087}
   m_Layer: 0
   m_Name: BirthingPod
   m_TagString: Interactable
@@ -2878,6 +2946,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.090918, y: 3.3863835}
   m_EdgeRadius: 0
+--- !u!114 &2109858087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109858083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ee83b917c882047a0890da903f7425, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 101
+  dialogueManager: {fileID: 1878149886}
+  dialogue:
+    name: '...'
+    sentences:
+    - 'This is strange...
+
+      Was I inside?'
 --- !u!1 &2138204000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3020,6 +3108,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
         type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 977985690}
@@ -3028,6 +3121,23 @@ PrefabInstance:
       propertyPath: playerInv
       value: 
       objectReference: {fileID: 447254273}
+    - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1878149886}
+    - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: dialogue.name
+      value: '.....'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'The door is closed.
+
+        Maybe I can find a way to open it.'
+      objectReference: {fileID: 0}
     - target: {fileID: 3276760812948841674, guid: 663eacbb14798014faa3e57f8722a3dd,
         type: 3}
       propertyPath: animator

@@ -865,7 +865,7 @@ PrefabInstance:
     - target: {fileID: 9004647944564084874, guid: 47e1209efd54a004e8261272a812a47b,
         type: 3}
       propertyPath: health
-      value: 500
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 9004647944564084917, guid: 47e1209efd54a004e8261272a812a47b,
         type: 3}
@@ -2193,6 +2193,10 @@ MonoBehaviour:
   isDoorClosed: 1
   playerPos: {fileID: 1978536851}
   playerInv: {fileID: 1434401018}
+  dialogueManager: {fileID: 0}
+  dialogue:
+    name: 
+    sentences: []
 --- !u!1 &1453382952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,11 +3725,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 838611594295499293, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: foundKeyCardOne
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 838611593975548297, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3840,6 +3839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: currentMana
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 838611594295499293, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: foundKeyCardOne
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc8172da65c7db49aa5cc079e22220f, type: 3}

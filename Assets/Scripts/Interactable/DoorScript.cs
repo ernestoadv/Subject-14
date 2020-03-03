@@ -13,6 +13,9 @@ public class DoorScript : MonoBehaviour
     public Transform playerPos;
     public PlayerInventory playerInv;
 
+    public DialogueManager dialogueManager;
+    public Dialogue dialogue;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,9 @@ public class DoorScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("HumanPlayer"))
         {
+            if(!gotKeyCard)
+                dialogueManager.StartDialogue(dialogue);
+
             Debug.Log("Player is in range door");
             playerPos = collision.gameObject.GetComponent<Transform>();
             DoorInteraction();
@@ -40,6 +46,7 @@ public class DoorScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("HumanPlayer"))
         {
+            dialogueManager.EndDialogue();
             Debug.Log("Player is NOT in range with door");
         }
     }

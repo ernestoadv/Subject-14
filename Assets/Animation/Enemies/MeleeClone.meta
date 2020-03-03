@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animation/Enemies/MeleeClone.meta
 guid: 69ddb4c2417635847aa1c99a40937a66
+=======
+guid: cba8a274b61b21246843f6cdb4b42c4d
+>>>>>>> 205ba95fafbd77f9dbe7e493d1b62475b3cf8aa2:Assets/Animation/Enemies/Clones.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
