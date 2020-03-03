@@ -88,6 +88,7 @@ public class PlayerStats : MonoBehaviour
         if(currentHealth <= 0 && isAlive)
         {
             print("player should die");
+            GetComponent<PlayerMovement2D>().enabled = false;
             isAlive = false;
             animator.SetTrigger("death");
         }
