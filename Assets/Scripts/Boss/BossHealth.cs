@@ -35,7 +35,7 @@ public class BossHealth : MonoBehaviour
         print("boss takedmg function called");
         if (isInvulnerable)
             return;
-        animator.SetTrigger("hurt");
+        //animator.SetTrigger("hurt");
         currentHealth -= dmg;
 
         if (currentHealth <= 250)

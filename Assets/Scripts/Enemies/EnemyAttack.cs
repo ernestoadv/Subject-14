@@ -8,7 +8,7 @@ public class EnemyAttack : MonoBehaviour
     public int stageTwoAttackDamage = 40;
 
     public Vector3 attackOffset;
-    public float attackRange = 1f;
+    public float attackRange = 2.5f;
     public LayerMask attackMask;
 
     // Start is called before the first frame update

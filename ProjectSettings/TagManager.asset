@@ -12,6 +12,8 @@ TagManager:
   - EnemyShootPos
   - HumanPlayer
   - Destroyable
+  - FOV
+  - EnemyMelee
   layers:
   - Default
   - TransparentFX
@@ -33,7 +35,7 @@ TagManager:
   - Door
   - KeyCard
   - Destroyable
-  - 
+  - FOV
   - 
   - 
   - 

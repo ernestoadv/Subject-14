@@ -73,7 +73,12 @@ public class PlayerCombat : MonoBehaviour
                     {
                         Debug.Log("We hit " + enemy.name + " with " + punchDmg);
                         enemy.GetComponent<BossHealth>().BossTakeDamage(punchDmg);
-                    }        
+                    }
+                    else if (enemy.CompareTag("EnemyMelee"))
+                    {
+                        Debug.Log("We hit " + enemy.name + " with " + punchDmg);
+                        enemy.GetComponent<EnemyMelee>().TakeDamage(punchDmg);
+                    }
                 }
                 nextPunch = Time.time + 1f / punchRate;
             }
