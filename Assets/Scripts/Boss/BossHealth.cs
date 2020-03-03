@@ -38,7 +38,7 @@ public class BossHealth : MonoBehaviour
         animator.SetTrigger("hurt");
         currentHealth -= dmg;
 
-        if (currentHealth <= 250)
+        if (currentHealth <= health/2)
         {
             print("boss should enrage...");
             animator.SetBool("isEnraged", true);
