@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
     public Transform player;
+    public GameObject UI;
     public bool isFlipped = false;
 
     //health variable for "normal" enemies
@@ -12,6 +14,9 @@ public class Enemy : MonoBehaviour
     public int currentHealth;
 
     private Animator myAnimator;
+
+    private bool isAlive = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,16 +57,29 @@ public class Enemy : MonoBehaviour
         myAnimator.SetTrigger("hurt");
         if(currentHealth <= 0)
         {
-            myAnimator.SetBool("death", true);
-            //DIE ANIMATION? here or in the die function
-            Invoke("Die", .5f);
+            Die();
         }
     }
 
-    public void Die()
+    private bool GetEnemyStatus()
     {
-        Debug.Log("enemy died");
-        //die animation
+        return isAlive;
+    }
+
+    private void Die()
+    {
+        if (currentHealth <= 0 && isAlive)
+        {
+            print("enemy should die");
+            isAlive = false;
+            Destroy(UI);
+            myAnimator.SetTrigger("death");
+
+        }
+    }
+
+    private void DestroyEnemy()
+    {
         Destroy(gameObject);
     }
 }
