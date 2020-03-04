@@ -63,6 +63,7 @@ public class DoorScript : MonoBehaviour
                 //animation
                 Debug.Log("should play open animation");
                 animator.SetTrigger("opening");
+                FindObjectOfType<AudioManager>().PlaySound("Door");
                 isDoorClosed = false;
                 colliderActive = false;
                 gameObject.GetComponent<BoxCollider2D>().enabled = colliderActive;

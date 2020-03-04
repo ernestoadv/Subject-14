@@ -53,6 +53,7 @@ public class PlayerMovement2D : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<AudioManager>().PlaySound("Run");
                 myAnimator.SetBool("running", false);
             }      
     }
@@ -63,6 +64,7 @@ public class PlayerMovement2D : MonoBehaviour
         if (Input.GetButtonDown("Jump") && myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             print("Jump pressed");
+            FindObjectOfType<AudioManager>().PlaySound("Jump");
             //Vector2 jumpVelocity = new Vector2(0f, jumpMove);
             //myRigidBody.velocity += jumpVelocity; 
             //myRigidBody.AddForce(Vector2.up * 700f);

@@ -35,10 +35,11 @@ public class BossHealth : MonoBehaviour
         print("boss takedmg function called");
         if (isInvulnerable)
             return;
-        //animator.SetTrigger("hurt");
+        animator.SetTrigger("hurt");
         currentHealth -= dmg;
+        FindObjectOfType<AudioManager>().PlaySound("Hurt");
 
-        if (currentHealth <= health/2)
+        if (currentHealth <= 250)
         {
             print("boss should enrage...");
             animator.SetBool("isEnraged", true);
@@ -67,6 +68,7 @@ public class BossHealth : MonoBehaviour
             GameObject.Find("LevelEnd").GetComponent<BoxCollider2D>().enabled = true;
             GameObject.Find("Player").GetComponent<PlayerInventory>().foundKeyCardOne = true;
             animator.SetTrigger("death");
+            FindObjectOfType<AudioManager>().PlaySound("Death");
 
         }
     }

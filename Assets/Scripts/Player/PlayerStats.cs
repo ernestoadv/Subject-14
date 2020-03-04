@@ -13,7 +13,7 @@ public class PlayerStats : MonoBehaviour
 
     private Animator animator;
 
-    public bool isAlive = true;
+    private bool isAlive = true;
 
 
     // Start is called before the first frame update
@@ -53,6 +53,7 @@ public class PlayerStats : MonoBehaviour
         animator.SetTrigger("hurt");
         currentHealth = currentHealth > 0 ? currentHealth - dmg : 0;
         GameObject.Find("HealthText").GetComponent<Text>().text = "HP " + currentHealth + "/100";
+        FindObjectOfType<AudioManager>().PlaySound("Hurt");
     }
 
     public void ReduceMana(int mana)
@@ -91,6 +92,7 @@ public class PlayerStats : MonoBehaviour
             GetComponent<PlayerMovement2D>().enabled = false;
             isAlive = false;
             animator.SetTrigger("death");
+            FindObjectOfType<AudioManager>().PlaySound("Death");
         }
     }
 
