@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/0 - Menu.unity
     guid: 50e04fac7d2790e47bc1baa005332a94
   - enabled: 1
+    path: Assets/Scenes/CloseUp.unity
+    guid: 67f95dc34ba3c0146a25fc8bb596095d
+  - enabled: 1
     path: Assets/Scenes/1 - Lab.unity
     guid: 35e86bb601e6eae478b22aa40dc9c2ee
   - enabled: 1
