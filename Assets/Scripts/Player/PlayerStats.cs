@@ -15,6 +15,7 @@ public class PlayerStats : MonoBehaviour
 
     public bool isAlive = true;
 
+    public GameObject LoseMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -99,7 +100,7 @@ public class PlayerStats : MonoBehaviour
     private void DestroyPlayer()
     {
         Destroy(gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); //Load same level
+        LoseMenu.SetActive(true);
     }
 
 }
