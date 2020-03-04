@@ -2420,6 +2420,11 @@ PrefabInstance:
       propertyPath: UI
       value: 
       objectReference: {fileID: 1278233362}
+    - target: {fileID: 9140049092460968725, guid: 5e05a8a85b27f8945bbcf6e874c5a933,
+        type: 3}
+      propertyPath: isFlipped
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e05a8a85b27f8945bbcf6e874c5a933, type: 3}
 --- !u!4 &1372339501 stripped

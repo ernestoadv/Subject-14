@@ -195,7 +195,7 @@ MonoBehaviour:
   player: {fileID: 0}
   UI: {fileID: 0}
   isFlipped: 1
-  maxHealth: 200
+  maxHealth: 150
   currentHealth: 0
 --- !u!70 &-5236872421932487853
 CapsuleCollider2D:

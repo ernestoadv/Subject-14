@@ -235,7 +235,7 @@ MonoBehaviour:
     m_Bits: 8192
   m_GroundCheck: {fileID: 5105071660682408337}
   attackPos: {fileID: 5105071660470313192}
-  damage: 1
+  damage: 2
   velocity: 7
   attackRate: 0.3
   attackRange: 3.4
@@ -257,6 +257,7 @@ MonoBehaviour:
   isFlipped: 1
   maxHealth: 100
   currentHealth: 0
+  isAlive: 1
 --- !u!70 &-6692670013363916454
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

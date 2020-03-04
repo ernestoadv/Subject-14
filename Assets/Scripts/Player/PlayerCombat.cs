@@ -27,6 +27,7 @@ public class PlayerCombat : MonoBehaviour
     private float nextKick = 0f;
 
     private bool attacking = false;
+    private bool isAlive;
 
     public LayerMask enemyLayers;
     public LayerMask bossLayers;
@@ -50,6 +51,7 @@ public class PlayerCombat : MonoBehaviour
         Kick();
         EyeBeam();
         Shield();
+        isAlive = gameObject.GetComponent<PlayerStats>().isAlive;
     }
 
     private enum AttackType { KICK, PUNCH };
@@ -108,7 +110,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Punch()
     {
-        if (Time.time >= nextPunch && !attacking)
+        if (Time.time >= nextPunch && !attacking && isAlive)
         {
             if (Input.GetButtonDown("Fire1"))
             {
@@ -121,7 +123,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Kick()
     {
-        if (Time.time >= nextKick && !attacking)
+        if (Time.time >= nextKick && !attacking && isAlive)
         {
             if (Input.GetButtonDown("Fire2"))
             {
@@ -135,7 +137,7 @@ public class PlayerCombat : MonoBehaviour
     private void EyeBeam()
     {
         Debug.Log("Entering EyeBeam");
-        if (playerStats.currentMana >= eyeBeamSpellCost && Input.GetButtonDown("Fire3"))
+        if (playerStats.currentMana >= eyeBeamSpellCost && Input.GetButtonDown("Fire3") && isAlive)
         {
             Debug.Log("If Statement EyeBeam");
             print("pewpew...");
@@ -152,7 +154,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Shield()
     {
-        if (Input.GetButtonDown("Ability1"))
+        if (Input.GetButtonDown("Ability1") && isAlive)
         {
             if(playerStats.currentMana >= shieldSpellCost)
             {

@@ -241,8 +241,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   playerStats: {fileID: 838611594295499292}
-  eyeBeamSpellCost: 10
-  shieldSpellCost: 15
+  eyeBeamSpellCost: 8
+  shieldSpellCost: 12
 --- !u!114 &838611594295499292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +259,7 @@ MonoBehaviour:
   currentHealth: 100
   maxMana: 75
   currentMana: 75
+  isAlive: 1
 --- !u!114 &838611594295499293
 MonoBehaviour:
   m_ObjectHideFlags: 0

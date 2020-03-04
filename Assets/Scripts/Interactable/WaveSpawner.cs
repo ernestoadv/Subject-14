@@ -69,7 +69,6 @@ public class WaveSpawner : MonoBehaviour
                     StartCoroutine(SpawnWave(waves[nextWave]));
                 else
                 {
-                    Debug.Log("WAVE Nº " + nextWave);
                     cameraNeedSmooth = true;
                     smoothCompleted = false;
                 }
@@ -149,10 +148,10 @@ public class WaveSpawner : MonoBehaviour
             EnemyCopy.GetComponent<EnemyMelee>().player = GameObject.Find("Player").transform;
 
             //Set UI
-            GameObject UICopy = Instantiate(EnemyUI);
-            EnemyCopy.GetComponent<EnemyMelee>().UI = UICopy;
-            UICopy.GetComponentInChildren<MeleeHealthBar>().enemy = EnemyCopy.GetComponent<EnemyMelee>();
-            UICopy.SetActive(true);
+            //GameObject UICopy = Instantiate(EnemyUI);
+            //EnemyCopy.GetComponent<EnemyMelee>().UI = UICopy;
+            //UICopy.GetComponentInChildren<MeleeHealthBar>().enemy = EnemyCopy.GetComponent<EnemyMelee>();
+            //UICopy.SetActive(true);
         }
     }
 
@@ -162,7 +161,7 @@ public class WaveSpawner : MonoBehaviour
         if(searchCountDown <= 0f)
         {
             searchCountDown = 1f;
-            if (GameObject.FindGameObjectWithTag("Enemy") == null)
+            if (GameObject.FindGameObjectWithTag("Enemy") == null && GameObject.FindGameObjectWithTag("EnemyMelee") == null)
             {
                 return false;
             }

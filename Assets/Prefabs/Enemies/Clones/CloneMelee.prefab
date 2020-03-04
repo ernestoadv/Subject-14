@@ -528,11 +528,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   punchPos: {fileID: 7473798197805518213}
-  punchDmg: 0
+  punchDmg: 5
   attackDistance: 3
   moveSpeed: 2
   timer: 1.5
-  maxHealth: 100
+  maxHealth: 75
   currentHealth: 0
   isFlipped: 1
   UI: {fileID: 7473798197659827370}

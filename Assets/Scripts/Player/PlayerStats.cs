@@ -13,7 +13,7 @@ public class PlayerStats : MonoBehaviour
 
     private Animator animator;
 
-    private bool isAlive = true;
+    public bool isAlive = true;
 
 
     // Start is called before the first frame update

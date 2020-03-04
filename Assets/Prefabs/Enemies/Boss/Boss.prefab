@@ -76,6 +76,7 @@ MonoBehaviour:
   isFlipped: 0
   maxHealth: 100
   currentHealth: 0
+  isAlive: 1
 --- !u!212 &9004647944564084914
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -198,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1f2cf1a533b9645a1e0248548192bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 15
-  stageTwoAttackDamage: 25
+  attackDamage: 12
+  stageTwoAttackDamage: 18
   attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 1
   attackMask:
