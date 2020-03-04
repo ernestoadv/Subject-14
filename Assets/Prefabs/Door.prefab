@@ -122,6 +122,13 @@ MonoBehaviour:
   isDoorClosed: 1
   playerPos: {fileID: 0}
   playerInv: {fileID: 0}
+  dialogueManager: {fileID: 0}
+  dialogue:
+    name: '.....'
+    sentences:
+    - 'The door is closed.
+
+      Maybe I can find a way to open it.'
 --- !u!61 &3276760814269491229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -194,7 +201,7 @@ SpriteRenderer:
   m_Size: {x: 9.26, y: 9.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &3276760814269491234

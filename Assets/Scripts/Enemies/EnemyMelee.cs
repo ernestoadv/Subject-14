@@ -41,7 +41,7 @@ public class EnemyMelee : MonoBehaviour
     {
         currentHealth = maxHealth;
         initialTimer = timer;
-        anim = GetComponent<Animator>();
+        myAnimator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("HumanPlayer").transform;
     }
 
@@ -79,7 +79,7 @@ public class EnemyMelee : MonoBehaviour
         distance = Vector2.Distance(transform.position, target.transform.position);
         if(distance > attackDistance)
         {
-            anim.SetBool("canWalk", false);
+            myAnimator.SetBool("canWalk", false);
             Move();
             StopAttack();
         }
@@ -92,14 +92,14 @@ public class EnemyMelee : MonoBehaviour
         if (cooling)
         {
             Cooldown();
-            anim.SetBool("attack", false);
+            myAnimator.SetBool("attack", false);
         }
     }
 
     private void Move()
     {
         Debug.Log("in Move function");
-        anim.SetBool("canWalk", true);
+        myAnimator.SetBool("canWalk", true);
         Vector2 targetPosition = new Vector2(target.transform.position.x, transform.position.y);
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
     }
@@ -109,8 +109,8 @@ public class EnemyMelee : MonoBehaviour
         Debug.Log("in attack function");
         timer = initialTimer; //reset timer when player enter attack range
         attackMode = true; //to check if enemy can still attack or not 
-        anim.SetBool("canWalk", false);
-        anim.SetBool("attack", true);
+        myAnimator.SetBool("canWalk", false);
+        myAnimator.SetBool("attack", true);
     }
 
     void Cooldown()
@@ -127,7 +127,7 @@ public class EnemyMelee : MonoBehaviour
         Debug.Log("in stop attack function");
         cooling = false;
         attackMode = false;
-        anim.SetBool("attack", false);
+        myAnimator.SetBool("attack", false);
     }
 
     public void DamagePlayer()
@@ -148,6 +148,7 @@ public class EnemyMelee : MonoBehaviour
         currentHealth -= dmg;
         if(currentHealth <= 0)
         {
+            Debug.Log("Die function");
             Die();
         }
     }

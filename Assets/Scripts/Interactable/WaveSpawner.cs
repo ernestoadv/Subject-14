@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour
     [System.Serializable]
     public class Wave
     {
-        public Enemy[] enemies;
+        public GameObject[] enemies;
         public int count;
         public float rate;
     }
@@ -69,6 +69,7 @@ public class WaveSpawner : MonoBehaviour
                     StartCoroutine(SpawnWave(waves[nextWave]));
                 else
                 {
+                    Debug.Log("WAVE Nº " + nextWave);
                     cameraNeedSmooth = true;
                     smoothCompleted = false;
                 }
@@ -95,6 +96,7 @@ public class WaveSpawner : MonoBehaviour
                 camera.GetComponent<CameraFollow>().enabled = true;
                 cameraNeedSmooth = false;
                 smoothCompleted = true;
+                Destroy(gameObject);
             }
         }
     }
@@ -120,22 +122,38 @@ public class WaveSpawner : MonoBehaviour
         yield break;
     }
 
-    void SpawnEnemy(Enemy enemy)
+    void SpawnEnemy(GameObject enemy)
     {
-        //Set Enemy
-        int spawn = Random.Range(0, spawnPoints.Length);
-        Enemy EnemyCopy = Instantiate(enemy, spawnPoints[spawn].transform.position, spawnPoints[spawn].transform.rotation);
-        EnemyCopy.GetComponent<Enemy>().player = GameObject.Find("Player").transform;
-        if (EnemyCopy.GetComponent<Animal>())
+        if(enemy.CompareTag("Enemy"))
         {
-            EnemyCopy.GetComponent<Animal>().player = GameObject.Find("Player");
-        }
+            //Set Enemy
+            int spawn = Random.Range(0, spawnPoints.Length);
+            GameObject EnemyCopy = Instantiate(enemy, spawnPoints[spawn].transform.position, spawnPoints[spawn].transform.rotation);
+            EnemyCopy.GetComponent<Enemy>().player = GameObject.Find("Player").transform;
+            if (EnemyCopy.GetComponent<Animal>())
+            {
+                EnemyCopy.GetComponent<Animal>().player = GameObject.Find("Player");
+            }
 
-        //Set UI
-        GameObject UICopy = Instantiate(EnemyUI);
-        EnemyCopy.GetComponent<Enemy>().UI = UICopy;
-        UICopy.GetComponentInChildren<EnemyHealthBar>().enemy = EnemyCopy;
-        UICopy.SetActive(true);
+            //Set UI
+            GameObject UICopy = Instantiate(EnemyUI);
+            EnemyCopy.GetComponent<Enemy>().UI = UICopy;
+            UICopy.GetComponentInChildren<EnemyHealthBar>().enemy = EnemyCopy.GetComponent<Enemy>();
+            UICopy.SetActive(true);
+        }
+        else if(enemy.CompareTag("EnemyMelee"))
+        {
+            //Set Enemy
+            int spawn = Random.Range(0, spawnPoints.Length);
+            GameObject EnemyCopy = Instantiate(enemy, spawnPoints[spawn].transform.position, spawnPoints[spawn].transform.rotation);
+            EnemyCopy.GetComponent<EnemyMelee>().player = GameObject.Find("Player").transform;
+
+            //Set UI
+            GameObject UICopy = Instantiate(EnemyUI);
+            EnemyCopy.GetComponent<EnemyMelee>().UI = UICopy;
+            UICopy.GetComponentInChildren<MeleeHealthBar>().enemy = EnemyCopy.GetComponent<EnemyMelee>();
+            UICopy.SetActive(true);
+        }
     }
 
     bool EnemyAlive()

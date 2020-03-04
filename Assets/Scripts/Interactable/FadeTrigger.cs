@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-public class CollisionTrigger : MonoBehaviour
+public class FadeTrigger : MonoBehaviour
 {
     public Animator animator;
 

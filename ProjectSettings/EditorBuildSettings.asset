@@ -10,10 +10,10 @@ EditorBuildSettings:
     guid: 50e04fac7d2790e47bc1baa005332a94
   - enabled: 1
     path: Assets/Scenes/1 - Lab.unity
-    guid: 17d9580ac1bce3146a0290698011853b
+    guid: 35e86bb601e6eae478b22aa40dc9c2ee
   - enabled: 1
     path: Assets/Scenes/2 - Lab.unity
-    guid: 35e86bb601e6eae478b22aa40dc9c2ee
+    guid: 327507b311bfa544bacb3650392a6e9f
   - enabled: 1
     path: Assets/Scenes/3 - Lab.unity
     guid: 566eac30ec0d5af478e04330ecb9d03d
@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/4 - Boss.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/5 - Dessert.unity
+    path: Assets/Scenes/5 - Desert.unity
     guid: e476a4623b7e6aa4492cac082c186db6
   - enabled: 1
     path: Assets/Scenes/6 - Forest.unity

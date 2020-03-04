@@ -1268,6 +1268,21 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548300, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.13783413
+      objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548300, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.08909457
+      objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548300, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.69513935
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6dc8172da65c7db49aa5cc079e22220f, type: 3}
 --- !u!1 &565453237
@@ -3356,11 +3371,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
         type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
-        type: 3}
       propertyPath: playerPos
       value: 
       objectReference: {fileID: 977985690}
@@ -3374,22 +3384,50 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 1878149886}
-    - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
-        type: 3}
-      propertyPath: dialogue.name
-      value: '.....'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3276760814269491228, guid: 663eacbb14798014faa3e57f8722a3dd,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: 'The door is closed.
-
-        Maybe I can find a way to open it.'
-      objectReference: {fileID: 0}
     - target: {fileID: 3276760812948841674, guid: 663eacbb14798014faa3e57f8722a3dd,
         type: 3}
       propertyPath: animator
       value: 
       objectReference: {fileID: 283863957}
+    - target: {fileID: 3276760812948841675, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760812948841675, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760814269491229, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760812948841673, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760812948841673, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760812948841673, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760812948841673, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3276760812948841673, guid: 663eacbb14798014faa3e57f8722a3dd,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 663eacbb14798014faa3e57f8722a3dd, type: 3}

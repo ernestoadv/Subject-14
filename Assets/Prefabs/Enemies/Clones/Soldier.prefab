@@ -171,7 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   UI: {fileID: 0}
-  isFlipped: 0
+  isFlipped: 1
   maxHealth: 100
   currentHealth: 15
 --- !u!50 &9140049092460968726

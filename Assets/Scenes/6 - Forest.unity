@@ -4602,6 +4602,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.79
       objectReference: {fileID: 0}
+    - target: {fileID: 838611593975548300, guid: 6dc8172da65c7db49aa5cc079e22220f,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 838611593975548302, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
       propertyPath: m_SortingOrder
@@ -4631,11 +4636,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.8392157
-      objectReference: {fileID: 0}
-    - target: {fileID: 838611593975548300, guid: 6dc8172da65c7db49aa5cc079e22220f,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 838611593975548291, guid: 6dc8172da65c7db49aa5cc079e22220f,
         type: 3}
@@ -11265,6 +11265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 165b81e8759c5da45b5f97e7eedd7508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1238466702}
 --- !u!61 &1714364132
 BoxCollider2D:
   m_ObjectHideFlags: 0

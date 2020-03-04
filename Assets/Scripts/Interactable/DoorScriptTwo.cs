@@ -16,7 +16,11 @@ public class DoorScriptTwo : MonoBehaviour
 
     public GeneratorScript generatorScript;
 
-  
+    public DialogueManager dialogueManager;
+    public Dialogue dialogueKey;
+
+    public Dialogue dialogueGen;
+
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +42,15 @@ public class DoorScriptTwo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("HumanPlayer"))
         {
+            if (!gotKeyCard)
+            {
+                dialogueManager.StartDialogue(dialogueKey);
+            }
+            else if (isGeneratorActive)
+            {
+                dialogueManager.StartDialogue(dialogueGen);
+            }
+
             Debug.Log("Player is in range door");
             playerPos = collision.gameObject.GetComponent<Transform>();
             DoorInteraction();
@@ -48,6 +61,7 @@ public class DoorScriptTwo : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("HumanPlayer"))
         {
+            dialogueManager.EndDialogue();
             Debug.Log("Player is NOT in range with door");
         }
     }

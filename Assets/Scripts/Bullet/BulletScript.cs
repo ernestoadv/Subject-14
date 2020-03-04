@@ -18,30 +18,35 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.GetComponent<Enemy>();
+
+        Collider2D enemy = collision.GetComponent<Collider2D>();
+
         if (enemy != null)
         {
             if (enemy.CompareTag("Enemy"))
             {
                 Debug.Log("We hit " + enemy.name + " with " + dmg);
                 enemy.GetComponent<Enemy>().TakeDamage(dmg);
+                DestroySelf();
             }
             else if (enemy.CompareTag("Boss"))
             {
                 Debug.Log("We hit " + enemy.name + " with " + dmg);
                 enemy.GetComponent<BossHealth>().BossTakeDamage(dmg);
+                DestroySelf();
             }
             else if (enemy.CompareTag("EnemyMelee"))
             {
                 Debug.Log("We hit " + enemy.name + " with " + dmg);
                 enemy.GetComponent<EnemyMelee>().TakeDamage(dmg);
+                DestroySelf();
             }
             else if (enemy.CompareTag("Player"))
             {
                 Debug.Log("We hit " + enemy.name + " with " + dmg);
                 enemy.GetComponent<PlayerStats>().TakeDamage(dmg);
+                DestroySelf();
             }
-            DestroySelf();
         }
     }
     private void DestroySelf()

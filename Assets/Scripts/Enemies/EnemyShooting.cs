@@ -28,6 +28,7 @@ public class EnemyShooting : MonoBehaviour
     {
         myAnimator = GetComponent<Animator>();
         timeBtwShots = startTimeBtwShots;
+        playerPos = GameObject.FindGameObjectWithTag("HumanPlayer").transform;
     }
 
     // Update is called once per frame
