@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CloseUp : MonoBehaviour
 {
     public DialogueManager dialogueManager;
     public Dialogue dialogue;
     public GameObject longFade;
+    public GameObject blackFade;
     private int numberSentences, count;
     private bool dialogueShowed;
 
@@ -49,19 +51,19 @@ public class CloseUp : MonoBehaviour
                 dialogueShowed = true;
                 dialogueManager.EndDialogue();
                 FindObjectOfType<AudioManager>().PlaySound("Glass");
-                StartCoroutine(wait());
             }
         }
-        else if (dialogueShowed)
-        {
+        else if (dialogueShowed) {
+
+            blackFade.SetActive(true);
             StartCoroutine(wait());
-           // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Load new level
-           // Time.timeScale = 1; //Unfreeze the game
         }
     }
 
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); //Load new level
+        Time.timeScale = 1; //Unfreeze the game
     }
 }
