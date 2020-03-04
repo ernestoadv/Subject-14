@@ -50,7 +50,7 @@ public class DialogueInteraction : MonoBehaviour
     private void Interact()
     {
         // You press the key
-        if (isInRange && Input.GetKeyDown(interactKey))
+        if (isInRange && Input.GetButtonDown("interact"))
         {
             // If the dialogue wasn't showing, it's displayed.
             if (!isShowing)

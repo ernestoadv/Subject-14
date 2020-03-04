@@ -3661,7 +3661,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Hurt
     clip: {fileID: 8300000, guid: 03403c218f679614c8a05303eda6ccb6, type: 3}
-    volume: 1
+    volume: 0.118
     loop: 0
     source: {fileID: 0}
   - name: Death
@@ -4171,11 +4171,11 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 1131415555, guid: e1d005f6f579ac24281627fdea579db9, type: 3}
       propertyPath: m_IsTrigger
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1131415555, guid: e1d005f6f579ac24281627fdea579db9, type: 3}
       propertyPath: m_Offset.x
-      value: -0.1211462
+      value: -0.15767956
       objectReference: {fileID: 0}
     - target: {fileID: 1131415555, guid: e1d005f6f579ac24281627fdea579db9, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -4187,7 +4187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131415555, guid: e1d005f6f579ac24281627fdea579db9, type: 3}
       propertyPath: m_Size.x
-      value: 4.269491
+      value: 5.1219273
       objectReference: {fileID: 0}
     - target: {fileID: 1131415555, guid: e1d005f6f579ac24281627fdea579db9, type: 3}
       propertyPath: m_Offset.y

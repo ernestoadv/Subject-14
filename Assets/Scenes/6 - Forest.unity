@@ -7064,7 +7064,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Hurt
     clip: {fileID: 8300000, guid: 03403c218f679614c8a05303eda6ccb6, type: 3}
-    volume: 1
+    volume: 0.127
     loop: 0
     source: {fileID: 0}
   - name: Death
