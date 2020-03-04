@@ -15,6 +15,7 @@ public class EnemyMelee : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public bool isFlipped = false;
+    public GameObject UI;
     #endregion
 
     #region Private Variables
@@ -26,6 +27,8 @@ public class EnemyMelee : MonoBehaviour
     //private bool inRange; //check if player is in range
     private bool cooling; //check if enemy is cooling after attack
     private float initialTimer;
+    private Animator myAnimator;
+    private bool isAlive = true;
     #endregion
 
     // Start is called before the first frame update
@@ -145,8 +148,7 @@ public class EnemyMelee : MonoBehaviour
         currentHealth -= dmg;
         if(currentHealth <= 0)
         {
-            //DIE
-            Destroy(gameObject);
+            Die();
         }
     }
 
@@ -154,5 +156,22 @@ public class EnemyMelee : MonoBehaviour
     {
         Debug.Log("cooling was triggered");
         cooling = true;
+    }
+
+    private void Die()
+    {
+        if (currentHealth <= 0 && isAlive)
+        {
+            print("enemy should die");
+            isAlive = false;
+            Destroy(UI);
+            myAnimator.SetTrigger("death");
+
+        }
+    }
+
+    private void DestroyEnemy()
+    {
+        Destroy(gameObject);
     }
 }

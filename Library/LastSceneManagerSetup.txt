@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/3 - Lab.unity
-=======
-- path: Assets/Scenes/5 - Dessert.unity
->>>>>>> 205ba95fafbd77f9dbe7e493d1b62475b3cf8aa2
   isLoaded: 1
   isActive: 1
   isSubScene: 0

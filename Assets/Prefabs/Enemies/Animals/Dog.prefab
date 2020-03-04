@@ -105,7 +105,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2011268393
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ec77383f133c1c442acbc4952b173f2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -223,7 +223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  isFlipped: 0
+  UI: {fileID: 0}
+  isFlipped: 1
+  maxHealth: 100
   currentHealth: 0
 --- !u!70 &7938275894374034769
 CapsuleCollider2D:

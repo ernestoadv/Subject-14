@@ -80,15 +80,6 @@ public class Animal : MonoBehaviour
     {
         Vector3 targetVelocity = new Vector2(move * velocity, m_Rigidbody2D.velocity.y);
         m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-
-        if (move > 0 && !m_FacingRight)
-        {
-            Flip();
-        }
-        else if (move < 0 && m_FacingRight)
-        {
-            Flip();
-        }
     }
 
     public void Attack()

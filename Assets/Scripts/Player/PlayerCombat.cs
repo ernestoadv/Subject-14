@@ -26,6 +26,8 @@ public class PlayerCombat : MonoBehaviour
     private int kickDmg;
     private float nextKick = 0f;
 
+    private bool attacking = false;
+
     public LayerMask enemyLayers;
     public LayerMask bossLayers;
 
@@ -50,70 +52,76 @@ public class PlayerCombat : MonoBehaviour
         Shield();
     }
 
-    /*
-     * 
-     */
+    private enum AttackType { KICK, PUNCH };
+
+    private void Attack(AttackType type)
+    {
+        if (type == AttackType.KICK)
+        {
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(kickPos.position, kickRange, enemyLayers);
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                if (enemy.CompareTag("Enemy"))
+                {
+                    Debug.Log("We hit " + enemy.name + " with " + kickDmg);
+                    enemy.GetComponent<Enemy>().TakeDamage(kickDmg);
+                }
+                else if (enemy.CompareTag("Boss"))
+                {
+                    Debug.Log("We hit " + enemy.name + " with " + kickDmg);
+                    enemy.GetComponent<BossHealth>().BossTakeDamage(kickDmg);
+                }
+            }
+            nextKick = Time.time + 1f / kickRate;
+        }
+        else if (type == AttackType.PUNCH)
+        {
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(punchPos.position, punchRange, enemyLayers);
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                if (enemy.CompareTag("Enemy"))
+                {
+                    Debug.Log("We hit " + enemy.name + " with " + punchDmg);
+                    enemy.GetComponent<Enemy>().TakeDamage(punchDmg);
+                }
+                else if (enemy.CompareTag("Boss"))
+                {
+                    Debug.Log("We hit " + enemy.name + " with " + punchDmg);
+                    enemy.GetComponent<BossHealth>().BossTakeDamage(punchDmg);
+                }
+            }
+            nextPunch = Time.time + 1f / punchRate;
+        }
+
+        attacking = false;
+    }
+
     private void Punch()
     {
-        if(Time.time >= nextPunch)
+        if (Time.time >= nextPunch && !attacking)
         {
             if (Input.GetButtonDown("Fire1"))
             {
+                attacking = true;
                 print("punch...");
                 myAnimator.SetTrigger("punch");
-                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(punchPos.position, punchRange, enemyLayers);
-                foreach (Collider2D enemy in hitEnemies)
-                {
-                    if (enemy.CompareTag("Enemy"))
-                    {
-                        Debug.Log("We hit " + enemy.name + " with " + punchDmg);
-                        enemy.GetComponent<Enemy>().TakeDamage(punchDmg);
-                    }
-                    else if (enemy.CompareTag("Boss"))
-                    {
-                        Debug.Log("We hit " + enemy.name + " with " + punchDmg);
-                        enemy.GetComponent<BossHealth>().BossTakeDamage(punchDmg);
-                    }
-                    else if (enemy.CompareTag("EnemyMelee"))
-                    {
-                        Debug.Log("We hit " + enemy.name + " with " + punchDmg);
-                        enemy.GetComponent<EnemyMelee>().TakeDamage(punchDmg);
-                    }
-                }
-                nextPunch = Time.time + 1f / punchRate;
             }
-        }  
+        }
     }
 
-   /*
-    * 
-    */
     private void Kick()
     {
-        if(Time.time >= nextKick)
+        if (Time.time >= nextKick && !attacking)
         {
             if (Input.GetButtonDown("Fire2"))
             {
+                attacking = true;
                 print("kick...");
                 myAnimator.SetTrigger("kick");
-                Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(kickPos.position, kickRange, enemyLayers);
-                foreach (Collider2D enemy in hitEnemies)
-                {
-                    if (enemy.CompareTag("Enemy"))
-                    {
-                        Debug.Log("We hit " + enemy.name + " with " + kickDmg);
-                        enemy.GetComponent<Enemy>().TakeDamage(kickDmg);
-                    }
-                    else if (enemy.CompareTag("Boss"))
-                    {
-                        Debug.Log("We hit " + enemy.name + " with " + kickDmg);
-                        enemy.GetComponent<BossHealth>().BossTakeDamage(kickDmg);
-                    }
-                }
-                nextKick = Time.time + 1f / kickRate;
             }
-        }  
+        }
     }
+
     private void Shoot()
     {
         if (Input.GetButtonDown("Fire3"))
