@@ -5918,7 +5918,7 @@ MonoBehaviour:
   - enemies:
     - {fileID: 7473798197866466767, guid: 758010195f4bee345ac5ef7ab13f891a, type: 3}
     - {fileID: 9140049092460968728, guid: 5e05a8a85b27f8945bbcf6e874c5a933, type: 3}
-    count: 2
+    count: 3
     rate: 1
   spawnPoints:
   - {fileID: 1999392779}
@@ -7495,12 +7495,12 @@ MonoBehaviour:
   - enemies:
     - {fileID: 9140049092460968728, guid: 5e05a8a85b27f8945bbcf6e874c5a933, type: 3}
     - {fileID: 7473798197866466767, guid: 758010195f4bee345ac5ef7ab13f891a, type: 3}
-    count: 2
+    count: 3
     rate: 1
   - enemies:
     - {fileID: 9140049092460968728, guid: 5e05a8a85b27f8945bbcf6e874c5a933, type: 3}
     - {fileID: 7473798197866466767, guid: 758010195f4bee345ac5ef7ab13f891a, type: 3}
-    count: 2
+    count: 3
     rate: 1
   spawnPoints:
   - {fileID: 2047376244}

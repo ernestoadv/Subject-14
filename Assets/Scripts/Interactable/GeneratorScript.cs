@@ -67,7 +67,7 @@ public class GeneratorScript : MonoBehaviour
 
     private void DamageGenerator()
     {
-        if (isInRange && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+        if (isInRange && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")) || (Input.GetButtonDown("Fire1Alt") || Input.GetButtonDown("Fire2Alt")))
         {
             timesHit++;
             if(timesHit == 1)

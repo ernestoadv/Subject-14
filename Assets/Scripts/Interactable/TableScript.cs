@@ -39,7 +39,7 @@ public class TableScript : MonoBehaviour
 
     private void TableInteraction()
     {
-        if (isInRange && Input.GetKeyDown(interactKey))
+        if (isInRange && (Input.GetButtonDown("interact") || Input.GetButtonDown("interactAlt")))
         {
             Debug.Log("player is interacting with table");
             //play ui element 

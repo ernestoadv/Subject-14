@@ -47,11 +47,14 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Punch();
-        Kick();
-        EyeBeam();
-        Shield();
         isAlive = gameObject.GetComponent<PlayerStats>().isAlive;
+        if (isAlive)
+        {
+            Punch();
+            Kick();
+            EyeBeam();
+            Shield();
+        }
     }
 
     private enum AttackType { KICK, PUNCH };
@@ -112,7 +115,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= nextPunch && !attacking && isAlive)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire1Alt"))
             {
                 attacking = true;
                 print("punch...");
@@ -125,7 +128,7 @@ public class PlayerCombat : MonoBehaviour
     {
         if (Time.time >= nextKick && !attacking && isAlive)
         {
-            if (Input.GetButtonDown("Fire2"))
+            if (Input.GetButtonDown("Fire2") || Input.GetButtonDown("Fire2Alt"))
             {
                 attacking = true;
                 print("kick...");
@@ -137,7 +140,7 @@ public class PlayerCombat : MonoBehaviour
     private void EyeBeam()
     {
         Debug.Log("Entering EyeBeam");
-        if (playerStats.currentMana >= eyeBeamSpellCost && Input.GetButtonDown("Fire3") && isAlive)
+        if (playerStats.currentMana >= eyeBeamSpellCost && (Input.GetButtonDown("Fire3") || Input.GetButtonDown("Fire3Alt")) && !attacking)
         {
             Debug.Log("If Statement EyeBeam");
             print("pewpew...");
@@ -154,7 +157,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Shield()
     {
-        if (Input.GetButtonDown("Ability1") && isAlive)
+        if ((Input.GetButtonDown("Ability1") || Input.GetButtonDown("Ability1Alt")) && isAlive)
         {
             if(playerStats.currentMana >= shieldSpellCost)
             {
@@ -170,7 +173,7 @@ public class PlayerCombat : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonUp("Ability1"))
+        if (Input.GetButtonUp("Ability1") || Input.GetButtonUp("Ability1Alt"))
         {
             myAnimator.enabled = true;
             myAnimator.SetTrigger("unshield");

@@ -207,7 +207,7 @@ MonoBehaviour:
   attackPos: {fileID: 1717371405234200020}
   damage: 3
   velocity: 9
-  attackRate: 0.3
+  attackRate: 0.7
   attackRange: 2
   player: {fileID: 0}
 --- !u!114 &-331139679020567053

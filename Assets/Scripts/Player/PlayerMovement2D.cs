@@ -29,16 +29,19 @@ public class PlayerMovement2D : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveHorizontal();
-        Jump();
-        ImprovedJump();
-        if (Input.GetAxis("Horizontal") < 0 && isFacingRight)
+        if (gameObject.GetComponent<PlayerStats>().isAlive)
         {
-            Flip();
-        }
-        else if (Input.GetAxis("Horizontal") > 0 && !isFacingRight)
-        {
-            Flip();
+            MoveHorizontal();
+            Jump();
+            ImprovedJump();
+            if (Input.GetAxis("Horizontal") < 0 && isFacingRight)
+            {
+                Flip();
+            }
+            else if (Input.GetAxis("Horizontal") > 0 && !isFacingRight)
+            {
+                Flip();
+            }
         }
     }
 
@@ -61,7 +64,7 @@ public class PlayerMovement2D : MonoBehaviour
     //simple jumping method 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump") && myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if ((Input.GetButtonDown("Jump") || Input.GetButtonDown("JumpAlt")) && myFeet.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             print("Jump pressed");
             FindObjectOfType<AudioManager>().PlaySound("Jump");

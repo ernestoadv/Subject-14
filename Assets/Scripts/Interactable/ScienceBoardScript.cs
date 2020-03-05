@@ -42,7 +42,7 @@ public class ScienceBoardScript : MonoBehaviour
 
     private void BoardInteraction()
     {
-        if (isInRange && Input.GetKeyDown(interactKey))
+        if (isInRange && (Input.GetButtonDown("interact") || Input.GetButtonDown("interactAlt")))
         {
             Debug.Log("player is interacting with scienceboard");
             //play ui element 

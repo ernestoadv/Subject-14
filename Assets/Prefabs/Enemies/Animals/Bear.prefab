@@ -205,7 +205,7 @@ MonoBehaviour:
     m_Bits: 8192
   m_GroundCheck: {fileID: 8232022813880915976}
   attackPos: {fileID: 4606102302639764612}
-  damage: 8
+  damage: 11
   velocity: 3.5
   attackRate: 0.5
   attackRange: 2
@@ -225,7 +225,7 @@ MonoBehaviour:
   player: {fileID: 0}
   UI: {fileID: 0}
   isFlipped: 1
-  maxHealth: 250
+  maxHealth: 300
   currentHealth: 0
   isAlive: 1
 --- !u!70 &3004182395428156609

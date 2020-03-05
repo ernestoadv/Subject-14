@@ -528,7 +528,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   punchPos: {fileID: 7473798197805518213}
-  punchDmg: 5
+  punchDmg: 6
   attackDistance: 3
   moveSpeed: 2
   timer: 1.5

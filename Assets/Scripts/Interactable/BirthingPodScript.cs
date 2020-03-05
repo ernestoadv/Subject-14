@@ -42,7 +42,7 @@ public class BirthingPodScript : MonoBehaviour
 
     private void PodInteraction()
     {
-        if (isInRange && Input.GetKeyDown(interactKey))
+        if (isInRange && (Input.GetButtonDown("interact") || Input.GetButtonDown("interactAlt")))
         {
             Debug.Log("player is interacting with Pod");
             //play ui element 
