@@ -1331,42 +1331,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1684037207}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1720343386}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2132599752}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 968148014}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1684037210}
+        m_MethodName: Back
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4296,7 +4263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1684037208}
-  - component: {fileID: 1684037209}
+  - component: {fileID: 1684037210}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -4325,7 +4292,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0011749, y: 0.0011597}
   m_SizeDelta: {x: 601.51, y: 338.29}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1684037209
+--- !u!114 &1684037210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4334,7 +4301,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1684037207}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45491fe6e3f2dab468bd7f59c3c5dbb8, type: 3}
+  m_Script: {fileID: 11500000, guid: 930b54801ab7c474a9fe5bf45964cd1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1687351963
